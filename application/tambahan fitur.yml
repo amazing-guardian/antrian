@@ -1,0 +1,49 @@
+# sesuaikan view dengan layout
+nomor antrian yang terlewat
+# sampai 160
+# tambah jam 14.00-16.00
+# nama yang ingin dibesuk (pakai bin)
+# tahanan -> surat besukan (kejaksaan atau kepolisian)
+# semua data disimpan (cek komentar di admin->reset)
+  # copy semua gambar dari cache ke permanen -> sejak awal pindah ke situ, nggak pakai cache
+  # pakai tanggal
+# identitas yang ingin dibesuk dan identitas pembesuk
+  # yang ingin dibesuk
+    # nama (bin)
+    # bukti surat besukan (kejaksaan dan kepolisian)
+
+SKIP
+
+foto diri -> di akun
+nyoba koneksi ke hosting image (api)
+
+ALUR
+
+- daftar kode booking (keluar qrcode)
+    # pilih jadwal besukan (tahaan atau napi). Jika bukan jamnya, akan terkunci otomatis dan akan muncul keterangan informasi: Maaf, Anda tidak bisa membesuk karena bukan jam besukan napi/tahanan. Untuk jadwal besukan, silahkan buka link berikut ini
+- daftar ke pelayanan secara langsung (persyaratan asli dibawa)
+- pelayanan mengeluarkan qrcode untuk masuk
+- menunggu antrian (ada nomor tunggu antrian)
+- masuk dengan qrcode
+- melapor ke p2u dan distempel tangan oleh p2u
+
+ISI KONTEN BLOG
+
+- apa yang harus dilakukan selama besukan
+- hal apa saja yang tidak boleh dilakukan pada saat besukan
+- alur atau tata cara pembesuk
+- hak dan kewajiban pembesuk
+- hak dan kewajiban petugas
+
+REGISTER
+
+# - nama lengkap
+# - foto diri
+# - foto ktp asli
+# - nomor ktp
+# - alamat
+# - ttl
+# - usia (yang ini nanti otomatis aja)
+# - pekerjaan
+# - jenis kelamin
+# - status

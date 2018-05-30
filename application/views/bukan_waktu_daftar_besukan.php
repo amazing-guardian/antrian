@@ -1,0 +1,1 @@
+<div class="alert alert-warning">Mengambil nomor antrian hanya diperbolehkan pada pukul 08.00-09.00 dan 14.00-16.00</div>
