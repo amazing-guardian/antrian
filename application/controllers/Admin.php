@@ -11,6 +11,20 @@ class Admin extends CI_Controller {
 		if (strtolower($this->session->userdata('username')) != 'admin'){
 			redirect(base_url().'index.php/login');
 		}
+		function tampil($judul, $isi, $parameter){
+
+			// https://stackoverflow.com/questions/27384117/codeigniter-using-this-when-not-in-object-context-in-function
+
+			$ci =& get_instance();
+
+			$ci->load->view('layout/default', array(
+				'judul' => $judul,
+				'isi' => $isi,
+				'isi_parameter' => array(
+					'data' => $parameter
+				)
+			));	
+		}
 	}
 
 	// index
@@ -24,13 +38,14 @@ class Admin extends CI_Controller {
 	public function tampil_anggota(){
 		$data = $this->user_database->tampil_data('user', 'order by nama');
 		// $this->load->view('tampil_anggota', array('data' => $data));
-		$this->load->view('layout/default', array(
-			'judul' => 'Tampil Anggota',
-			'isi' => 'tampil_anggota',
-			'isi_parameter' => array(
-				'data' => $data
-			)
-		));
+		// $this->load->view('layout/default', array(
+		// 	'judul' => 'Tampil Anggota',
+		// 	'isi' => 'tampil_anggota',
+		// 	'isi_parameter' => array(
+		// 		'data' => $data
+		// 	)
+		// ));
+		tampil('Tampil Anggota', 'tampil_anggota', $data);
 	}
 
 	// edit anggota
@@ -41,13 +56,14 @@ class Admin extends CI_Controller {
 		);
 		$data = $this->user_database->tampil_data_where('user', $where)->result();
 		// $this->load->view('edit_anggota', array('data' => $data));	
-		$this->load->view('layout/default', array(
-			'judul' => 'Edit Anggota',
-			'isi' => 'edit_anggota',
-			'isi_parameter' => array(
-				'data' => $data
-			)
-		));
+		// $this->load->view('layout/default', array(
+		// 	'judul' => 'Edit Anggota',
+		// 	'isi' => 'edit_anggota',
+		// 	'isi_parameter' => array(
+		// 		'data' => $data
+		// 	)
+		// ));
+		tampil('Edit Anggota', 'edit_anggota', $data);
 	}
 
 	public function edit_anggota_do(){
@@ -110,13 +126,14 @@ class Admin extends CI_Controller {
 			'tertinggi' => $nomor_antrian_tertinggi
 		);
 		// $this->load->view('ubah_antrian', array('data' => $data));
-		$this->load->view('layout/default', array(
-			'judul' => 'Ubah Antrian',
-			'isi' => 'ubah_antrian',
-			'isi_parameter' => array(
-				'data' => $data
-			)
-		));
+		// $this->load->view('layout/default', array(
+		// 	'judul' => 'Ubah Antrian',
+		// 	'isi' => 'ubah_antrian',
+		// 	'isi_parameter' => array(
+		// 		'data' => $data
+		// 	)
+		// ));
+		tampil('Ubah Antrian', 'ubah_antrian', $data);
 	}
 
 	public function data_tertinggi(){

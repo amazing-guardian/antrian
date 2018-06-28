@@ -11,6 +11,18 @@ class User extends CI_Controller {
 		if ($this->session->userdata('status') != 'login'){
 			redirect(base_url().'index.php/login');
 		}
+		function tampil($judul, $isi, $parameter){
+
+			// https://stackoverflow.com/questions/27384117/codeigniter-using-this-when-not-in-object-context-in-function
+
+			$ci =& get_instance();
+
+			$ci->load->view('layout/default', array(
+				'judul' => $judul,
+				'isi' => $isi,
+				'isi_parameter' => $parameter
+			));	
+		}
 	}
 
 	// index
@@ -200,7 +212,7 @@ class User extends CI_Controller {
 		$waktu = date("H");
 
 		if (!($waktu == $waktu_1) && !($waktu_awal_2 <= $waktu && $waktu <= $waktu_akhir_2)){
-			redirect(base_url().'index.php/info/bukan_waktu_daftar_besukan');
+			// redirect(base_url().'index.php/info/bukan_waktu_daftar_besukan');
 			// echo $waktu;
 		}
 
