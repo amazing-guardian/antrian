@@ -90,6 +90,8 @@ class Qr extends CI_Controller {
 				'username' => $username
 			));
 			// echo 'QR Code sudah diverifikasi';
+			$nomor_antrian = $ambil_data[0]->nomor_antrian;
+			$qrcode = $ambil_data[0]->qrcode;
 			$data = array(
 				'qrcode' => $qrcode,
 				'nomor_antrian' => $nomor_antrian
