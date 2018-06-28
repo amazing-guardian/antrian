@@ -134,7 +134,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (18,'123456','Admin','laki-laki','LINE Webtoon','admin','admin',0,0,'','','','','','','','','','','','','','','','','','',''),(44,'4545435453','ari','laki-laki','tarakan','ari','ari',0,0,'','3f00fd501b1a9fe0165178252734a0bb.jpg','','','','','','','','','','','','','','','','',''),(45,'4646843384','kucing','laki-laki','kota','kucing','kucing',0,0,'','58766833d9ca15f552dfffb4370b321f.jpg','','','','','','','','','','','kota','2010-09-12','jualan','','menikah','',''),(46,'3151351385185531','hantu','perempuan','hantu','hantu','hantu',0,0,'','b3cd5d69057276fb05aa493da0f83617.jpg','','','','','','','','','','','hantu','1111-11-11','hantu','ded7c50287a8ef60a9c9d31c07ef1ed0.jpg','tidak menikah','','');
+INSERT INTO `user` VALUES (18,'123456','Admin','laki-laki','LINE Webtoon','admin','admin',0,0,'','','','','','','','','','','','','','','','','','',''),(44,'4545435453','ari','laki-laki','tarakan','ari','ari',0,0,'besuk_tahanan','3f00fd501b1a9fe0165178252734a0bb.jpg','kucing','3547534354354354','c9859808ec43c1347d02686b57f52d09.jpg','3d220c33748ad396baa717fe652bd88e.jpg','ari','4545435453','ari_booking.png','49609bd34895e0b288469c2450b6dbd3.jpg','kucing bin kucing','2018-06-28 17:32:27','','','','','','tidak',''),(45,'4646843384','kucing','laki-laki','kota','kucing','kucing',0,0,'','58766833d9ca15f552dfffb4370b321f.jpg','','','','','','','','','','','kota','2010-09-12','jualan','','menikah','',''),(46,'3151351385185531','hantu','perempuan','hantu','hantu','hantu',0,0,'','b3cd5d69057276fb05aa493da0f83617.jpg','','','','','','','','','','','hantu','1111-11-11','hantu','ded7c50287a8ef60a9c9d31c07ef1ed0.jpg','tidak menikah','','');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -147,4 +147,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-28 17:30:06
+-- Dump completed on 2018-06-28 17:33:06
