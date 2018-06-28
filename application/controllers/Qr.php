@@ -31,9 +31,7 @@ class Qr extends CI_Controller {
 			$ci->load->view('layout/polos', array(
 				'judul' => $judul,
 				'isi' => 'qr code/'.$isi,
-				'isi_parameter' => array(
-					'data' => $parameter
-				)
+				'isi_parameter' => $parameter
 			));
 		}
 	}
