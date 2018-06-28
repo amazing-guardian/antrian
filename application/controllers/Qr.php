@@ -90,7 +90,10 @@ class Qr extends CI_Controller {
 				'username' => $username
 			));
 			// echo 'QR Code sudah diverifikasi';
-			tampil_polos('Print QR Code', 'print qr code', '');
+			$data = array(
+				
+			)
+			tampil_polos('Print QR Code', 'print qr code', $data);
 		} else {
 			echo 'QR Code sudah diverifikasi';
 		}
