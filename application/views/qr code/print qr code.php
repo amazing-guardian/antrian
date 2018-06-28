@@ -2,4 +2,4 @@
 <p>
 	<img src="<?= base_url() ?>gambar/cache/<?= $qrcode ?>" class="thumbnail">
 </p>
-<p>Nomor antrian: <?= $nomor_antrian ?></p>
+<h3>Nomor antrian: <?= $nomor_antrian ?></h3>

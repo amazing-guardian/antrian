@@ -5,6 +5,8 @@
 	<?php $this->load->view('elemen/head'); ?>
 </head>
 <body>
-	<?php $this->load->view($isi, $isi_parameter); ?>
+	<div class="container">
+		<?php $this->load->view($isi, $isi_parameter); ?>
+	</div>
 </body>
 </html>

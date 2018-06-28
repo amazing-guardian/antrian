@@ -21,9 +21,7 @@ class Qr extends CI_Controller {
 			$ci->load->view('layout/default', array(
 				'judul' => $judul,
 				'isi' => 'qr code/'.$isi,
-				'isi_parameter' => array(
-					'data' => $parameter
-				)
+				'isi_parameter' => $parameter
 			));	
 		}
 		function tampil_polos($judul, $isi, $parameter){
@@ -52,6 +50,7 @@ class Qr extends CI_Controller {
 		$status_verifikasi = $ambil_data[0]->verifikasi;
 
 		if ($status_verifikasi == 'tidak'){
+		// if ($status_verifikasi != 'atidak'){
 
 			$data_tertinggi = $this->user_database->tampil_data('user', 'order by nomor_antrian desc');
 			$nomor_antrian_tertinggi = $data_tertinggi[0]->nomor_antrian;
@@ -88,15 +87,21 @@ class Qr extends CI_Controller {
 				'username' => $username
 			));
 			// echo 'QR Code sudah diverifikasi';
-			$nomor_antrian = $ambil_data[0]->nomor_antrian;
+			$nomor_antrian = $ambil_data[0]->nomor_antrian + 1;
 			$qrcode = $ambil_data[0]->qrcode;
 			$data = array(
 				'qrcode' => $qrcode,
 				'nomor_antrian' => $nomor_antrian
-			)
-			tampil_polos('Print QR Code', 'print qr code', $data);
+			);
+			tampil('Print QR Code', 'print qr code', $data);
 		} else {
-			echo 'QR Code sudah diverifikasi';
+			$nomor_antrian = $ambil_data[0]->nomor_antrian;
+			$qrcode = str_replace('antrian', 'booking', $ambil_data[0]->qrcode);
+			$data = array(
+				'qrcode' => $qrcode,
+				'nomor_antrian' => $nomor_antrian
+			);
+			tampil('Print QR Code', 'print qr code', $data);
 		}
 	}
 
