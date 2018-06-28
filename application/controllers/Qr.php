@@ -28,7 +28,13 @@ class Qr extends CI_Controller {
 		}
 		function tampil_polos($judul, $isi, $parameter){
 			$ci =& get_instance();
-			$ci->load->view('layout')
+			$ci->load->view('layout/polos', array(
+				'judul' => $judul,
+				'isi' => 'qr code/'.$isi,
+				'isi_parameter' => array(
+					'data' => $parameter
+				)
+			));
 		}
 	}
 
@@ -84,7 +90,7 @@ class Qr extends CI_Controller {
 				'username' => $username
 			));
 			// echo 'QR Code sudah diverifikasi';
-			tampil('Print QR Code', 'print qr code', '');
+			tampil_polos('Print QR Code', 'print qr code', '');
 		} else {
 			echo 'QR Code sudah diverifikasi';
 		}
