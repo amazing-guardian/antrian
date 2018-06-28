@@ -12,6 +12,24 @@ class Qr extends CI_Controller {
 		if (strtolower($this->session->userdata('username')) != 'admin'){
 			redirect(base_url().'index.php/login');
 		}
+		function tampil($judul, $isi, $parameter){
+
+			// https://stackoverflow.com/questions/27384117/codeigniter-using-this-when-not-in-object-context-in-function
+
+			$ci =& get_instance();
+
+			$ci->load->view('layout/default', array(
+				'judul' => $judul,
+				'isi' => 'qr code/'.$isi,
+				'isi_parameter' => array(
+					'data' => $parameter
+				)
+			));	
+		}
+		function tampil_polos($judul, $isi, $parameter){
+			$ci =& get_instance();
+			$ci->load->view('layout')
+		}
 	}
 
 	public function index(){
@@ -65,7 +83,8 @@ class Qr extends CI_Controller {
 			), array(
 				'username' => $username
 			));
-			echo 'QR Code sudah diverifikasi';
+			// echo 'QR Code sudah diverifikasi';
+			tampil('Print QR Code', 'print qr code', '');
 		} else {
 			echo 'QR Code sudah diverifikasi';
 		}
