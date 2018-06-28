@@ -91,7 +91,8 @@ class Qr extends CI_Controller {
 			));
 			// echo 'QR Code sudah diverifikasi';
 			$data = array(
-				
+				'qrcode' => $qrcode,
+				'nomor_antrian' => $nomor_antrian
 			)
 			tampil_polos('Print QR Code', 'print qr code', $data);
 		} else {
