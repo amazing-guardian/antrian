@@ -1,5 +1,1 @@
-while true
-do
-	mysqldump antrian > antrian.sql
-	sleep 3m
-done
+mysqldump antrian > antrian.sql
