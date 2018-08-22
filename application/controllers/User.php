@@ -213,6 +213,9 @@ class User extends CI_Controller {
 
 		if (!($waktu == $waktu_1) && !($waktu_awal_2 <= $waktu && $waktu <= $waktu_akhir_2)){
 			// redirect(base_url().'index.php/info/bukan_waktu_daftar_besukan');
+
+			// waktunya dimatikan dulu ya
+
 			// echo $waktu;
 		}
 

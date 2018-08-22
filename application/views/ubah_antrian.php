@@ -18,6 +18,8 @@
 	<br>
 	<p>
 		<a href="<?= base_url('index.php/admin/reset_antrian') ?>">reset</a>
+		&bull;
+		<a href="<?= base_url() ?>index.php/login/logout">logout</a>
 	</p>
 </center>
 <?php

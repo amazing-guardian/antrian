@@ -1,4 +1,4 @@
-<div class="alert alert-info">Maksimal besukan 160 orang (di luar pengikut). Mengambil nomor antrian hanya diperbolehkan pada pukul 08.00-09.00 dan 14.00-16.00</div>
+<div class="alert alert-info">Maksimal besukan 160 orang (di luar pengikut)<!--. Mengambil nomor antrian hanya diperbolehkan pada pukul 08.00-09.00 dan 14.00-16.00--></div>
 <div class="alert alert-warning">Sudah <span class="nomor-antrian-tertinggi"><?= $nomor_antrian_tertinggi ?></span> orang mengambil nomor antrian. Sisa <span class="sisa-nomor-antrian"><?= $sisa_nomor_antrian ?></span> nomor antrian lagi</div>
 <center>
 	<p>
