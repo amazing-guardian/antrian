@@ -1,0 +1,7 @@
+Detail Login cPanel
+
+Domain 				: www.antrianrutansamarinda.com
+cPanel Username 	: antrianr
+cPanel Password 	: @74K0uaqz2SAY]
+Control Panel URL 	: http://canary.rapidplex.com/cpanel
+Alternatif 			: http://antrianrutansamarinda.com/cpanel
